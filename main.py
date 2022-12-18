@@ -6,6 +6,7 @@ def main():
     appleid = input(str("[*] Enter Apple Id: "))
     passforappleid = input(str("[*] Enter Password for apple Id: "))
     udid = input(str("[*] Input UDID your Device\n(to view udid use ./usbmuxd.sh, example: with serial number c9a6be55a912): "))
+    ipapath = input(str("Enter Path to ipa file: "))
     os.system("clear")
     info = Table(title="Inputed Information")
     info.add_column("Info", justify="center", style="cyan", no_wrap=True)
@@ -13,6 +14,7 @@ def main():
     info.add_row("Apple Id", appleid)
     info.add_row("Password for Apple Id", passforappleid)
     info.add_row("UDID", udid)
+    info.add_row("Ipa Path", ipapath)
     console = Console()
     console.print(info)
     with open("arch.txt") as txt:
